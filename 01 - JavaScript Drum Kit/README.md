@@ -3,4 +3,5 @@
 This exercise is to create a drum kit with the help of the keyboard buttons, A->L.
 
 
-Explain how
+1. 
+2. 

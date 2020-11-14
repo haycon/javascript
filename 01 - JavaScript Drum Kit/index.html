@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <title>JS Drum Kit</title>
   <link rel="stylesheet" href="style.css">
-  <script src="path/to/script1.js" async></script>
+  
 </head>
 <body>
-
-
+  <p id="log">Hellohellohello</p>
   <div class="keys">
     <div data-key="65" class="key">
       <kbd>A</kbd>
@@ -58,10 +57,45 @@
   <audio data-key="75" src="sounds/tom.wav"></audio>
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
-<script>
 
-</script>
+ 
+  <audio id="hihat">
+    <source src="sounds/hihat.wav" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  <!--
+  <audio id="kick">
+    <source src="sounds/clap.wav" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="openhat">
+    <source src="sounds/clap.wav" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="boom">
+    <source src="sounds/clap.wav" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="ride">
+    <source src="sounds/clap.wav" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="snare">
+    <source src="sounds/clap.wav" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="tom">
+    <source src="sounds/clap.wav" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="tink">
+    <source src="sounds/clap.wav" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  -->
 
+
+  <script src="script.js" async></script>
 
 </body>
 </html>
