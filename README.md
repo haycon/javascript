@@ -1,1 +1,1 @@
-# Javascript
+#30 JavaScript challenges in 30 days
