@@ -62,8 +62,7 @@
       background: black;
       position: absolute;
       top: 50%;
-      transform-origin: right bottom;
-      transform: rotate(90deg);
+      transform-origin: 100%;
     }
 
     .hour-hand, .minute-hand, .second-hand {
@@ -76,13 +75,13 @@
   	let hour = document.querySelector(".hour-hand")
   	let minute = document.querySelector(".min-hand")
   	let second = document.querySelector(".second-hand")
-  	let sdegree = 90
-  	let mdegree = 90
-  	let hdegree = 90
+  	let sdegree = 0
+  	let mdegree = 0
+  	let hdegree = 0
 
   	function incrementSeconds() {
   		sdegree += 6
-    	hour.style.transform = "rotate("+sdegree+"deg)"
+    	second.style.transform = "rotate("+sdegree+"deg)"
 	}
 
   	function incrementMinutes() {
