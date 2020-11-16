@@ -65,9 +65,6 @@
       transform-origin: 100%;
     }
 
-    .hour-hand, .minute-hand, .second-hand {
-	  
-    }
 
   </style>
 
@@ -87,7 +84,7 @@
   	let hdegree = 90 + (hours*30)
 
 	minute.style.transform = "rotate("+mdegree+"deg)"
-	hour.style.transform = "rotate("+hdegree+"deg)"	
+	hour.style.transform = "rotate("+hdegree+"deg)"
 
   	function incrementSeconds() {
   		sdegree += 6
@@ -103,7 +100,7 @@
   		hdegree += 6
     	hour.style.transform = "rotate("+hdegree+"deg)"
 	}
-	
+
   	var tick = setInterval(incrementSeconds, 1000);
   	var tick1 = setInterval(incrementMinutes, 60000);
   	var tick2 = setInterval(incrementHours, 3600000);
