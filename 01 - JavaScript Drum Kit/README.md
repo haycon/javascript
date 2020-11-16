@@ -6,10 +6,10 @@ This exercise is to create a drum kit with the help of the keyboard buttons, A->
 2. Function playsound which play a sound depending on the data-key pressed.
 3. Add CSS for the button that is pressed.
 
-## * Keywords:
+## Keywords:
 
-ES6
-forEach
-this
-data-key
-audio
+* ES6
+* forEach
+* this
+* data-key
+* audio
