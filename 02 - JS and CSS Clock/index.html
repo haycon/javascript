@@ -62,8 +62,8 @@
       background: black;
       position: absolute;
       top: 50%;
-      /*Sets where the transformation start from */
       transform-origin: 100%;
+      transition: all 0.5s;
     }
 
 <<<<<<< HEAD
@@ -73,42 +73,33 @@
   </style>
 
   <script>
-  	let hour = document.querySelector(".hour-hand")
+  const now = new Date();
+  var seconds = now.getSeconds();
+  var minutes = now.getMinutes();
+  var hours = now.getHours();
+
+  //Set the clock at the current time
+  //Ticks the second, minute and hour hand
+  function setDate() {
+
+    let hour = document.querySelector(".hour-hand")
   	let minute = document.querySelector(".min-hand")
   	let second = document.querySelector(".second-hand")
-  	const today = new Date()
-  	const seconds = today.getSeconds()
-  	const minutes = today.getMinutes()
-  	const hours = today.getHours()
 
-  	console.log(minutes)
-  	console.log(hours)
-  	let sdegree = 90 + (seconds*6)
-  	let mdegree = 90 + (minutes*6)
-  	let hdegree = 90 + (hours*30)
+    let secondsDegree = (((360/60)*seconds)+90)
+    let minutesDegree = (((360/60)*minutes)+90)
+    let hoursDegree = (((360/12)*hours)+90)
 
-	minute.style.transform = "rotate("+mdegree+"deg)"
-	hour.style.transform = "rotate("+hdegree+"deg)"
+    second.style.transform = `rotate(${secondsDegree}deg)`
+    minute.style.transform = `rotate(${minutesDegree}deg)`
+    hour.style.transform = `rotate(${hoursDegree}deg)`
 
-  	function incrementSeconds() {
-  		sdegree += 6
-    	second.style.transform = "rotate("+sdegree+"deg)"
-	}
+    seconds += 1;
+    minutes += (1/60);
+    hours += (1/60/24)
+  }
 
-  	function incrementMinutes() {
-  		mdegree += 6
-    	minute.style.transform = "rotate("+mdegree+"deg)"
-	}
-
-  	function incrementHours() {
-  		hdegree += 6
-    	hour.style.transform = "rotate("+hdegree+"deg)"
-	}
-
-  	var tick = setInterval(incrementSeconds, 1000);
-  	var tick1 = setInterval(incrementMinutes, 60000);
-  	var tick2 = setInterval(incrementHours, 3600000);
-
+  setInterval(setDate, 1000)
   </script>
 </body>
 </html>
