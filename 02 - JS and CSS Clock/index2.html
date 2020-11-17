@@ -81,7 +81,7 @@
   	console.log(hours)
   	let sdegree = 90 + (seconds*6)
   	let mdegree = 90 + (minutes*6)
-  	let hdegree = 90 + (hours*30)
+  	let hdegree = 90 + (hours*15)
 
 	minute.style.transform = "rotate("+mdegree+"deg)"
 	hour.style.transform = "rotate("+hdegree+"deg)"
@@ -97,7 +97,7 @@
 	}
 
   	function incrementHours() {
-  		hdegree += 6
+  		hdegree += 15
     	hour.style.transform = "rotate("+hdegree+"deg)"
 	}
 
