@@ -3,9 +3,7 @@
 This an exercise to get practice with updating CSS with Javascript.
 
 ## Keywords:
-*
-*
-*
+* cssVariables
 
 ## How I solved this exercise
 1. Made CSS variables.
