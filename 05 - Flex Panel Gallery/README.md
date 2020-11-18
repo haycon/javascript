@@ -14,7 +14,6 @@ This an exercise to get practice with flexbox.
 
 - eventListener
 - toggle
--
 
 ## How I solved this exercise
 
