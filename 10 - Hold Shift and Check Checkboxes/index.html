@@ -25,11 +25,7 @@
         border-bottom: 1px solid #f1f1f1;
       }
 
-      .item:last-child {
-        border-bottom: 0;
-      }
-
-      input:checked + p {
+      input:checked p {
         background: #f9f9f9;
         text-decoration: line-through;
       }
@@ -57,15 +53,15 @@
   -->
     <div class="inbox">
       <div class="item">
-        <input type="checkbox" />
+        <input id="1" type="checkbox" />
         <p>This is an inbox layout.</p>
       </div>
       <div class="item">
-        <input type="checkbox" />
+        <input id="2" type="checkbox" />
         <p>Check one item</p>
       </div>
       <div class="item">
-        <input type="checkbox" />
+        <input id="3" type="checkbox" />
         <p>Hold down your Shift key</p>
       </div>
       <div class="item">
@@ -89,11 +85,32 @@
         <p>Good Luck!</p>
       </div>
       <div class="item">
-        <input type="checkbox" />
+        <input id="8" type="checkbox" />
         <p>Don't forget to tweet your result!</p>
       </div>
     </div>
 
-    <script></script>
+    <script>
+      let num = document.getElementById('1').checked;
+      let num3 = document.getElementById('3').checked;
+
+      let one = document.getElementById('1');
+      let oneValue = parseInt(one.id);
+      let three = document.getElementById('3');
+      let threeValue = parseInt(three.id);
+
+      window.addEventListener('click', (e) => {
+        if (e.code === 'ShiftLeft') {
+        }
+        if (
+          document.getElementById('3').checked &&
+          document.getElementById('1').checked
+        ) {
+          for (let i = oneValue + 1; i < threeValue; i++) {
+            document.getElementById(`${i}`).checked = true;
+          }
+        }
+      });
+    </script>
   </body>
 </html>
