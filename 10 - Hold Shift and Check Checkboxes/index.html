@@ -99,12 +99,19 @@
       let three = document.getElementById('3');
       let threeValue = parseInt(three.id);
 
-      window.addEventListener('click', (e) => {
+      let shift = false;
+
+      window.addEventListener('keydown', (e) => {
         if (e.code === 'ShiftLeft') {
+          shift = true;
         }
+      });
+
+      window.addEventListener('click', (e) => {
         if (
           document.getElementById('3').checked &&
-          document.getElementById('1').checked
+          document.getElementById('1').checked &&
+          shift === true
         ) {
           for (let i = oneValue + 1; i < threeValue; i++) {
             document.getElementById(`${i}`).checked = true;
