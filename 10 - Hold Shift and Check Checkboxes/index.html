@@ -91,15 +91,25 @@
     </div>
 
     <script>
-      let num = document.getElementById('1').checked;
-      let num3 = document.getElementById('3').checked;
-
       let one = document.getElementById('1');
       let oneValue = parseInt(one.id);
       let three = document.getElementById('3');
       let threeValue = parseInt(three.id);
 
       let shift = false;
+
+      document.querySelectorAll('input').forEach((e) => {
+        e.addEventListener('change', () => {
+          let num = parseInt(e.id);
+          if (document.getElementById(`${num}`).checked) {
+          }
+        });
+      });
+
+      var inputbox1 = document.getElementById('inputbox1');
+      if (inputbox1) {
+        inputbox1.value = var1;
+      }
 
       window.addEventListener('keydown', (e) => {
         if (e.code === 'ShiftLeft') {
