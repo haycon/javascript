@@ -120,10 +120,19 @@
             lastChecked = parseInt(clicked.srcElement.id);
           }
 
-          if (firstChecked > 0 && lastChecked > 0 && shift === true) {
-            for (let i = firstChecked + 1; i < lastChecked; i++) {
-              console.log(i);
-              document.getElementById(`${i}`).checked = true;
+          if (firstChecked < lastChecked) {
+            if (firstChecked > 0 && lastChecked > 0 && shift === true) {
+              for (let i = firstChecked + 1; i < lastChecked; i++) {
+                document.getElementById(`${i}`).checked = true;
+              }
+            }
+          }
+
+          if (firstChecked > lastChecked) {
+            if (firstChecked > 0 && lastChecked > 0 && shift === true) {
+              for (let i = firstChecked; i > lastChecked; i--) {
+                document.getElementById(`${i}`).checked = true;
+              }
             }
           }
         });
