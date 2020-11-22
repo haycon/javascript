@@ -65,27 +65,27 @@
         <p>Hold down your Shift key</p>
       </div>
       <div class="item">
-        <input type="checkbox" />
+        <input id="4" type="checkbox" />
         <p>Check a lower item</p>
       </div>
       <div class="item">
-        <input type="checkbox" />
+        <input id="5" type="checkbox" />
         <p>Everything in between should also be set to checked</p>
       </div>
       <div class="item">
-        <input type="checkbox" />
+        <input id="6" type="checkbox" />
         <p>Try to do it without any libraries</p>
       </div>
       <div class="item">
-        <input type="checkbox" />
+        <input id="7" type="checkbox" />
         <p>Just regular JavaScript</p>
       </div>
       <div class="item">
-        <input type="checkbox" />
+        <input id="8" type="checkbox" />
         <p>Good Luck!</p>
       </div>
       <div class="item">
-        <input type="checkbox" />
+        <input id="9" type="checkbox" />
         <p>Don't forget to tweet your result!</p>
       </div>
     </div>
@@ -97,74 +97,37 @@
       let threeValue = parseInt(three.id);
 
       let shift = false;
-
-      /*
-      function handleCheck() {
-        lastChecked = this;
-      }
-
-      
-
-      checkboxes.forEach((checkbox) =>
-        checkbox.addEventListener('click', () => {
-          
-        })
-      );
-      */
       let firstChecked = 0;
       let lastChecked = 0;
-      let checkboxes = document.querySelectorAll('.inbox [type="checkbox"]');
 
       window.addEventListener('keydown', (e) => {
         if (e.code === 'ShiftLeft') {
           shift = true;
+        }
+      });
+
+      window.addEventListener('keyup', (e) => {
+        if (e.code === 'ShiftLeft') {
+          shift = false;
         }
       });
 
       document.querySelectorAll('input').forEach((input) => {
         input.addEventListener('change', (clicked) => {
           if (firstChecked == 0) {
-            firstChecked = clicked.srcElement.id;
+            firstChecked = parseInt(clicked.srcElement.id);
           } else {
-            lastChecked = clicked.srcElement.id;
+            lastChecked = parseInt(clicked.srcElement.id);
           }
 
           if (firstChecked > 0 && lastChecked > 0 && shift === true) {
             for (let i = firstChecked + 1; i < lastChecked; i++) {
-              console.log(document.getElementById(`${i}`).checked) = true;
+              console.log(i);
+              document.getElementById(`${i}`).checked = true;
             }
           }
-
-          //let num = parseInt(input.id);
-          /* if (document.getElementById(`${num}`).checked) {
-          } */
         });
       });
-
-      /*
-      var inputbox1 = document.getElementById('inputbox1');
-      if (inputbox1) {
-        inputbox1.value = var1;
-      }
-
-      window.addEventListener('keydown', (e) => {
-        if (e.code === 'ShiftLeft') {
-          shift = true;
-        }
-      });
-
-      window.addEventListener('click', (e) => {
-        if (
-          document.getElementById('3').checked &&
-          document.getElementById('1').checked &&
-          shift === true
-        ) {
-          for (let i = oneValue + 1; i < threeValue; i++) {
-            document.getElementById(`${i}`).checked = true;
-          }
-        }
-      });
-      */
     </script>
   </body>
 </html>
