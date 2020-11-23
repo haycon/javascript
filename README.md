@@ -1,1 +1,1 @@
-#30 JavaScript challenges in 30 days
+#A collection of Javascript files
