@@ -1,0 +1,22 @@
+
+body {
+    text-align: center;
+}
+
+#main {
+    border: 1px solid black;
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.square {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    float: left
+}
+
+#reset {
+    margin: 40px auto;
+}
